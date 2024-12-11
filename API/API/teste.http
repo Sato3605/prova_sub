@@ -1,0 +1,26 @@
+@base_url = http://localhost:5256/api
+
+###Cadastrar aluno
+POST {{base_url}}/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Rafael",
+    "sobrenome" : "Sato"
+}
+
+###cadastrar imc
+POST {{base_url}}/imc/cadastrar
+Content-Type: application/json
+
+{
+    "altura": 1.75,
+    "peso": 64,
+    "alunoId": 1
+}
+
+###listar imc
+GET {{base_url}}/imc/listar
+
+### Listar imc por aluno
+GET {{base_url}}/imc/buscar/rafael/sato
